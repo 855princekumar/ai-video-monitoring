@@ -1,73 +1,201 @@
-# Welcome to your Lovable project
+# Video Monitoring Dashboard
 
-## Project info
+A modern, responsive dashboard template built with React, TailwindCSS, and Vite. This flexible dashboard provides video stream monitoring capabilities with customizable controls and multiple viewing modes.
 
-**URL**: https://lovable.dev/projects/40765b56-19d5-4ed1-a45d-1c10a54123b9
+## Live Demo
 
-## How can I edit this code?
+Check out the live demo: [https://ai-video-monitor.netlify.app/](https://ai-video-monitor.netlify.app/)
 
-There are several ways of editing your application.
+<img width="927" height="923" alt="image" src="https://github.com/user-attachments/assets/b48827a5-ce5c-4348-bb84-2d33fd0243f6" />
 
-**Use Lovable**
+## Features
 
-Simply visit the [Lovable Project](https://lovable.dev/projects/40765b56-19d5-4ed1-a45d-1c10a54123b9) and start prompting.
+- **Multi-Stream Video Display**: Grid layout supporting multiple video streams
+- **Customizable Controls**: Toggle various features and settings
+- **Multiple Modes**: Switch between different monitoring scenarios
+- **Responsive Design**: Optimized for desktop and mobile devices
+- **Real-time Updates**: Live status indicators and controls
+- **Modern UI**: Clean, intuitive interface with TailwindCSS styling
 
-Changes made via Lovable will be committed automatically to this repo.
+## Technology Stack
 
-**Use your preferred IDE**
+- **Frontend Framework**: React 18
+- **Styling**: TailwindCSS
+- **Build Tool**: Vite
+- **Package Manager**: npm
+- **Deployment**: Netlify
 
-If you want to work locally using your own IDE, you can clone this repo and push changes. Pushed changes will also be reflected in Lovable.
+## Getting Started
 
-The only requirement is having Node.js & npm installed - [install with nvm](https://github.com/nvm-sh/nvm#installing-and-updating)
+### Prerequisites
 
-Follow these steps:
+- Node.js (version 16 or higher)
+- npm or yarn package manager
 
-```sh
-# Step 1: Clone the repository using the project's Git URL.
-git clone <YOUR_GIT_URL>
+### Installation
 
-# Step 2: Navigate to the project directory.
-cd <YOUR_PROJECT_NAME>
+1. Clone the repository:
+```bash
+git clone https://github.com/855princekumar/ai-video-monitoring.git
+cd ai-video-monitoring
+```
 
-# Step 3: Install the necessary dependencies.
-npm i
+2. Install dependencies:
+```bash
+npm install
+```
 
-# Step 4: Start the development server with auto-reloading and an instant preview.
+3. Start the development server:
+```bash
 npm run dev
 ```
 
-**Edit a file directly in GitHub**
+4. Open your browser and navigate to `http://localhost:5173`
 
-- Navigate to the desired file(s).
-- Click the "Edit" button (pencil icon) at the top right of the file view.
-- Make your changes and commit the changes.
+### Available Scripts
 
-**Use GitHub Codespaces**
+- `npm run dev` - Start development server
+- `npm run build` - Build for production
+- `npm run preview` - Preview production build locally
+- `npm run lint` - Run ESLint for code quality
 
-- Navigate to the main page of your repository.
-- Click on the "Code" button (green button) near the top right.
-- Select the "Codespaces" tab.
-- Click on "New codespace" to launch a new Codespace environment.
-- Edit files directly within the Codespace and commit and push your changes once you're done.
+## Project Structure
 
-## What technologies are used for this project?
+```
+ai-video-monitoring/
+├── public/
+│   ├── index.html
+│   └── assets/
+├── src/
+│   ├── components/
+│   │   ├── VideoGrid/
+│   │   ├── Controls/
+│   │   ├── ModeSelector/
+│   │   └── StatusIndicator/
+│   ├── hooks/
+│   ├── utils/
+│   ├── styles/
+│   ├── App.jsx
+│   └── main.jsx
+├── package.json
+├── vite.config.js
+├── tailwind.config.js
+└── README.md
+```
 
-This project is built with:
+## Usage
 
-- Vite
-- TypeScript
-- React
-- shadcn-ui
-- Tailwind CSS
+### Video Stream Management
 
-## How can I deploy this project?
+The dashboard displays video streams in a responsive grid layout. You can:
 
-Simply open [Lovable](https://lovable.dev/projects/40765b56-19d5-4ed1-a45d-1c10a54123b9) and click on Share -> Publish.
+- View multiple video feeds simultaneously
+- Switch between different sources
+- Adjust grid layout based on number of active streams
 
-## Can I connect a custom domain to my Lovable project?
+### Control Panel
 
-Yes, you can!
+Toggle different features using the control panel:
 
-To connect a domain, navigate to Project > Settings > Domains and click Connect Domain.
+```javascript
+// Example of feature toggle states
+const [features, setFeatures] = useState({
+  feature1: false,
+  feature2: false,
+  feature3: false
+});
+```
 
-Read more here: [Setting up a custom domain](https://docs.lovable.dev/tips-tricks/custom-domain#step-by-step-guide)
+### Monitoring Modes
+
+Select from predefined monitoring scenarios:
+
+- **Mode 1**: Campus monitoring configuration
+- **Mode 2**: Traffic monitoring setup  
+- **Mode 3**: Wildlife observation layout
+
+## Backend Integration
+
+This dashboard template is designed for easy integration with any backend system. Customize the API endpoints and data structure according to your needs.
+
+### Environment Variables
+
+Create a `.env` file in the root directory:
+
+```env
+VITE_API_BASE_URL=http://localhost:8000
+VITE_WS_URL=ws://localhost:8000/ws
+```
+
+### Customization
+
+The dashboard is built as a flexible template that can be easily modified:
+
+- **API Integration**: Update the service layer to match your backend structure
+- **Feature Controls**: Modify toggle switches and controls as needed
+- **Data Models**: Adapt data structures to your specific use case
+- **Styling**: Customize colors, layouts, and components using TailwindCSS
+
+## Deployment
+
+### Build for Production
+
+```bash
+npm run build
+```
+
+The build artifacts will be stored in the `dist/` directory.
+
+### Deploy to Netlify
+
+1. Connect your GitHub repository to Netlify
+2. Set build command: `npm run build`
+3. Set publish directory: `dist`
+4. Configure environment variables in Netlify dashboard
+
+## Contributing
+
+1. Fork the repository
+2. Create a feature branch (`git checkout -b feature/new-feature`)
+3. Commit your changes (`git commit -m 'Add new feature'`)
+4. Push to the branch (`git push origin feature/new-feature`)
+5. Open a Pull Request
+
+## Browser Support
+
+- Chrome (latest)
+- Firefox (latest)
+- Safari (latest)
+- Edge (latest)
+
+## Credits
+
+**Author**: Prince Kumar
+
+## License
+
+This project is licensed under the MIT License - see the [LICENSE](LICENSE) file for details.
+
+```
+MIT License
+
+Copyright (c) 2024 Prince Kumar
+
+Permission is hereby granted, free of charge, to any person obtaining a copy
+of this software and associated documentation files (the "Software"), to deal
+in the Software without restriction, including without limitation the rights
+to use, copy, modify, merge, publish, distribute, sublicense, and/or sell
+copies of the Software, and to permit persons to whom the Software is
+furnished to do so, subject to the following conditions:
+
+The above copyright notice and this permission notice shall be included in all
+copies or substantial portions of the Software.
+
+THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
+IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
+FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE
+AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
+LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
+OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
+SOFTWARE.
+```
